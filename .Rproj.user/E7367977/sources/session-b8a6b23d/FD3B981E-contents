@@ -1,0 +1,57 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+#Re-write the following requations in LaTex
+
+\(a\)
+
+$$
+E(Y) = y_1p_1+...+y_k+p_k = \sum_{i=1}^ky_ip_i
+$$\
+
+\(b\)
+
+$$
+\sigma_Y = Var(Y) = E[(Y-\mu_y)^2]=\int_{i=1}^k(y_i-\mu_y)^2p_i
+$$\
+(c)
+
+$$
+\bar{\beta} = \frac{\int_{i=1}^n(y-y_i)(x-x_i)}{\int_{i+1}^n(x-x)^2}
+$$\
+(d)
+
+$$
+P(a\leq Y\leq b) = \int_a^bf_Y(y)dy
+$$\
+(e)
+
+$$
+\hat{g}(x) = \frac{\frac{1}{nh}\int_{i=1}^ny_ik(\frac{x_i-x}{h})}{\frac{1}{nh}\int_{i=1}^nk(\frac{x_i-x}{h})}
+$$\
+\
+\

@@ -1,14 +1,14 @@
 {
-    "id": "0C134689",
-    "path": "C:/Users/meaga/Downloads/Econometrics/Asssignments/econ_3201/LaTex Functions.qmd",
-    "project_path": "LaTex Functions.qmd",
+    "id": "FD3B981E",
+    "path": "C:/Users/meaga/Downloads/Econometrics/Asssignments/econ_3201/Rewrite Equations practice assignment.qmd",
+    "project_path": "Rewrite Equations practice assignment.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "2989999632",
     "contents": "",
     "dirty": false,
-    "created": 1757739576511.0,
-    "source_on_save": false,
-    "relative_order": 2,
+    "created": 1757903841139.0,
+    "source_on_save": true,
+    "relative_order": 3,
     "properties": {
         "rmdVisualMode": "true",
         "rmdVisualWrapConfigured": "true",
@@ -19,14 +19,14 @@
         "scrollLine": "0",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "564:524.7999877929688"
+        "rmdVisualModeLocation": "927:1053.5999755859375"
     },
     "folds": "",
-    "lastKnownWriteTime": 1757903807,
+    "lastKnownWriteTime": 1757905066,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1757903807440,
+    "last_content_update": 1757905066582,
     "read_only": false,
     "read_only_alternatives": []
 }
