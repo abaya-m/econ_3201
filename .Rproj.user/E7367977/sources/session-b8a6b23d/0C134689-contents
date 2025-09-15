@@ -33,3 +33,44 @@ $$\frac{1}{2}$$
 
 $x_1$\
 #Exponents
+
+$x^2$\
+#Aligned
+
+$$
+\begin{aligned} 
+x & =3+5 \\
+& x =8
+\end{aligned}
+$$#sum
+
+$\sum_{i=1}^n$\
+
+$$
+\sum\
+$$\
+\
+#integral
+
+$\int_{a}^{b}$\
+
+$\int$\
+\
+\
+#Some Geeek Letters
+
+$\alpha$
+
+$\beta,\gamma$\
+#Inequalities
+
+$a\leq b$
+
+$a\geq b$\
+
+$a>b$\
+\
+\
+\
+
+\
