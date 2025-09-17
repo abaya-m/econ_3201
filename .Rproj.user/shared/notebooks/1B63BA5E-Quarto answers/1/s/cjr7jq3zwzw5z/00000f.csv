@@ -1,0 +1,4 @@
+"0","x <- mu + sigma * z
+"
+"2","Error: object 'z' not found
+"
