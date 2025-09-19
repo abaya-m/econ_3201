@@ -3,7 +3,9 @@ title: "Untitled"
 format: html
 editor: visual
 ---
+
 3.1
+
 ```{r}
 #(a)
 n <- 1000
@@ -67,7 +69,3 @@ df <- data.frame{table1}
 mpg <- ggplot2::mpg
 subset(mpg, year == 2008)
 ```
-
-
-
-

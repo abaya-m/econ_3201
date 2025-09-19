@@ -1,0 +1,214 @@
+---
+title: "Assignment_1"
+format: html
+editor: visual
+---
+
+#2
+
+\(a\)
+
+$$
+E(Y) = y_1p_1+...+y_k+p_k = \sum_{i=1}^ky_ip_i
+$$\
+
+\(b\)
+
+$$
+\sigma_Y = Var(Y) = E[(Y-\mu_y)^2]=\int_{i=1}^k(y_i-\mu_y)^2p_i
+$$\
+(c)
+
+$$
+\bar{\beta} = \frac{\int_{i=1}^n(y-y_i)(x-x_i)}{\int_{i+1}^n(x-x)^2}
+$$\
+(d)
+
+$$
+P(a\leq Y\leq b) = \int_a^bf_Y(y)dy
+$$\
+(e)
+
+$$
+\hat{g}(x) = \frac{\frac{1}{nh}\int_{i=1}^ny_ik(\frac{x_i-x}{h})}{\frac{1}{nh}\int_{i=1}^nk(\frac{x_i-x}{h})}
+$$\
+\
+\
+
+$$
+z_1 = \sqrt{-2ln(\mu_1)} x cos(2\pi\mu_2)
+$$\
+
+$$
+z_2 = \sqrt{-2ln(\mu_1)} x sin(2\pi\mu_x)
+$$\
+
+$$
+z = [z_1,z_2]
+$$\
+\
+
+#3.1
+
+(a) 
+
+```{r}
+n = 1000
+```
+
+(b) 
+
+```{r}
+mu_1 <- runif(n/2,0,1) 
+mu_2 <- runif(n/2,0,1)
+```
+
+(c) 
+
+```{r}
+z_1 <- sqrt(-2*log(mu_1))*cos(2*pi*mu_2)
+z_2 <- sqrt(-2*log(mu_1))*sin(2*pi*mu_2)
+```
+
+(d) 
+
+```{r}
+z <- c(z_1,z_2)
+```
+
+(e) 
+
+```{r}
+mu=5
+sigma=2
+```
+
+(f) 
+
+```{r}
+x = mu + sigma * z
+```
+
+(g) 
+
+```{r}
+mean(x)
+sd(x)
+```
+
+(h) 
+
+```{r}
+ hist(x,
+ freq= FALSE,
+ ylab= "Density",
+ xlab= "$x$")
+
+ curve(dnorm(x,mean= mu,sd= sigma),
+ col= "red", lwd= 2,add = TRUE)
+```
+
+#3.2 df \<- data.frame(Table 1)
+
+```{r}
+
+cihi <- read.csv("hlthexp.csv")
+
+df <- data.frame(Year = cihi$Year,
+                 Hospitals = cihi$Hospitals,
+                 Physicians = cihi$Physicians,
+                 "Other Services" = cihi$Other.Institutions,
+                 Dental = cihi$Other.Professionals..Dental.Services,
+                 Vision = cihi$Other.Professionals..Vision.Care.Services,
+                 "Other Professionals" = cihi$Other.Professionals..Other.Services,
+                 check.names = FALSE)
+```
+
+(a) Determine if there are any missing values for the variable Hospitals No missing values number of observations is 48 each has a value
+
+```{r}
+df$Hospitals
+```
+
+(b) 
+
+```{r}
+df$total_other_services <- df$Dental+ df$Vision + df$"Other Professionals"
+```
+
+(D) 
+
+```{r}
+cihi <- data.frame(cihi, "Perscription.Drugs" = "Prescribed.Drugs")
+```
+
+\(e\) Using a single R command, determine the expenditure on hospitals in 1983.
+
+```{r}
+Expenditure_1983 <- cihi["9", "Hospitals"]
+
+#df$Hospitals[df$Year:1983]
+
+```
+
+\(f\) Using a singe R command, list the expenditures by year for 2012-202
+
+```{r}
+df$Hospitals
+Expenditure_2012_2022 <- cihi["38-48", "Hospitals"]
+
+
+```
+
+#3.3
+
+(a) 
+
+```{r}
+mpg <- ggplot2::mpg
+subset(mpg, year == 2008)
+min(mpg$cty)
+max(mpg$cty)
+```
+
+(b) 
+
+```{r}
+n <- 11
+avg_mpg = sum(mpg$cty)/n
+```
+
+$$ Avg Mpg = \frac{sum_{i-1}^ncty_i}{n}$$
+
+(c) 
+
+```{r}
+mean(mpg$cty)
+```
+
+(d) 
+
+```{r}
+compact <- subset(mpg, class == "compact")
+ ifelse(compact == "compact", 1, 0)
+
+ #x <- c(-2, 0, 3)
+ #ifelse(x > 0, "Positive", "Not Positive")
+#compact <- subset(mpg, class == "compact")  
+```
+
+(e) Estimate average miles per gallon within cit limits for compact cars
+
+```{r}
+avg_mpg <- mean(compact$cty)
+```
+
+(f) Create a Scatter Plot X-axis city mpg (cty) Y-axis highway mpg(hwy)
+
+```{r}
+x <- mpg$cty
+y <- mpg$hwy
+
+plot(x, y, main="Figure 1 shows that fuel efficient for the city driving versus high driving", xlab="City MPG", ylab="Highway MPG", sub="City Versus Highway Fuel Efficiency (MPG)")
+
+```
