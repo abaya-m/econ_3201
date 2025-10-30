@@ -206,9 +206,18 @@ avg_mpg <- mean(compact$cty)
 (f) Create a Scatter Plot X-axis city mpg (cty) Y-axis highway mpg(hwy)
 
 ```{r}
+#| eval: true
+#| label: fig-1
+#| fig-cap:  "City Versus Highway Fuel Efficiency (MPG"
+
 x <- mpg$cty
 y <- mpg$hwy
 
-plot(x, y, main="Figure 1 shows that fuel efficient for the city driving versus high driving", xlab="City MPG", ylab="Highway MPG", sub="City Versus Highway Fuel Efficiency (MPG)")
+plot(x, 
+     y, 
+     xlab="City MPG", 
+     ylab="Highway MPG")
 
 ```
+
+@fig-1 shows the etc.
